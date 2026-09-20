@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Search Results in New Tab",
-  "version": "1.0",
+  "version": "1.1",
   "description": "Opens clicked search results (Google, DuckDuckGo) in a new tab instead of the current one.",
   "browser_specific_settings": {
     "gecko": {
@@ -33,25 +33,7 @@
   },
   "content_scripts": [
     {
-      "matches": [
-        "*://*.google.com/search*",
-        "*://*.google.co.uk/search*",
-        "*://*.google.co.il/search*",
-        "*://*.google.de/search*",
-        "*://*.google.fr/search*",
-        "*://*.google.ca/search*",
-        "*://*.google.com.au/search*",
-        "*://*.google.co.in/search*",
-        "*://*.google.co.jp/search*",
-        "*://*.google.es/search*",
-        "*://*.google.it/search*",
-        "*://*.google.nl/search*",
-        "*://*.google.com.br/search*",
-        "*://*.google.com.mx/search*",
-        "*://duckduckgo.com/*",
-        "*://html.duckduckgo.com/*",
-        "*://lite.duckduckgo.com/*"
-      ],
+      "matches": ["<all_urls>"],
       "js": ["content_script.js"],
       "run_at": "document_idle",
       "all_frames": false
